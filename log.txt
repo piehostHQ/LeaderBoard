@@ -1,0 +1,1045 @@
+Array
+(
+    [scores] => Array
+        (
+            [0] => Array
+                (
+                    [name] => Player1
+                    [score] => 95
+                )
+
+            [1] => Array
+                (
+                    [name] => Player2
+                    [score] => 12
+                )
+
+            [2] => Array
+                (
+                    [name] => Player3
+                    [score] => 93
+                )
+
+        )
+
+)
+Array
+(
+    [scores] => Array
+        (
+            [0] => Array
+                (
+                    [name] => Player1
+                    [score] => 51
+                )
+
+            [1] => Array
+                (
+                    [name] => Player2
+                    [score] => 96
+                )
+
+            [2] => Array
+                (
+                    [name] => Player3
+                    [score] => 69
+                )
+
+        )
+
+)
+Array
+(
+    [scores] => Array
+        (
+            [0] => Array
+                (
+                    [name] => Player1
+                    [score] => 38
+                )
+
+            [1] => Array
+                (
+                    [name] => Player2
+                    [score] => 92
+                )
+
+            [2] => Array
+                (
+                    [name] => Player3
+                    [score] => 79
+                )
+
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 11
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 11
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 11
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 11
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 12
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 12
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 11
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 11
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 2
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 21
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 12
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 2
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 2
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 2
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 3
+            [score] => 23
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 2
+            [score] => 20
+        )
+
+)
+[2025-03-15 10:33:18] Received: Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+
+[2025-03-15 10:33:20] PieSocket Response: {"error":"Missing message from payload"}
+[2025-03-15 10:35:31] Received: Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+
+[2025-03-15 10:35:35] PieSocket Response: {"error":"Missing message from payload"}
+[2025-03-15 10:35:42] Received: Array
+(
+    [player] => Array
+        (
+            [name] => Player 2
+            [score] => 1
+        )
+
+)
+
+[2025-03-15 10:35:43] PieSocket Response: {"error":"Missing message from payload"}
+[2025-03-15 10:35:49] Received: Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 21
+        )
+
+)
+
+[2025-03-15 10:35:50] PieSocket Response: {"error":"Missing message from payload"}
+[2025-03-15 10:36:44] Received: Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+
+[2025-03-15 10:36:44] PieSocket Response: {"error":"Missing message from payload"}
+[2025-03-15 10:36:58] Received: Array
+(
+    [player] => Array
+        (
+            [name] => Player 3
+            [score] => 32
+        )
+
+)
+
+[2025-03-15 10:36:59] PieSocket Response: {"error":"Missing message from payload"}
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 2
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 3
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 2
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 2
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 2
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 3
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 3
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 2
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 3
+            [score] => 4
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 3
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 2
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 3
+            [score] => 3
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 3
+            [score] => 4
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 3
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 12
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 3
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 2
+            [score] => 3
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 3
+            [score] => 4
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [name] => Player 1
+    [score] => 12
+)
+Array
+(
+    [name] => Player 1
+    [score] => 2
+)
+Array
+(
+    [name] => Player 1
+    [score] => 12
+)
+Array
+(
+    [name] => Player 1
+    [score] => 32
+)
+Array
+(
+    [name] => Player 1
+    [score] => 32
+)
+Array
+(
+    [name] => Player 1
+    [score] => 21
+)
+Array
+(
+    [name] => Player 1
+    [score] => 1
+)
+Array
+(
+    [name] => Player 1
+    [score] => 2
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 1
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 1
+            [score] => 2
+        )
+
+)
+Array
+(
+    [player] => Array
+        (
+            [name] => Player 3
+            [score] => 3
+        )
+
+)

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Leaderboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/piesocket-js@5"></script>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        table {
+            width: 60%;
+            margin: auto;
+            border-collapse: collapse;
+            background: #1e1e1e;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background: #333;
+            color: #ffcc00;
+            font-size: 1.2rem;
+        }
+
+        td {
+            background: #222;
+            font-size: 1.1rem;
+        }
+
+        tr:nth-child(even) td {
+            background: #292929;
+        }
+
+        tr:first-child td {
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        select,
+        input,
+        button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+        }
+
+        select,
+        input {
+            background: #333;
+            color: #fff;
+        }
+
+        button {
+            background: #ffcc00;
+            color: #000;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #ffaa00;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Live Leaderboard</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody id="leaderboard"></tbody>
+    </table>
+
+    <h3>Update Score</h3>
+    <div id="scoreDiv">
+        <label for="player">Player Name:</label>
+        <select id="player">
+            <option value="Player 1">Player 1</option>
+            <option value="Player 2">Player 2</option>
+            <option value="Player 3">Player 3</option>
+        </select>
+        <label for="score">New Score:</label>
+        <input type="number" id="score" required>
+        <button type="button" id="updateButton">Update Scores</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let leaderboardTable = document.getElementById("leaderboard");
+            let playerNameInput = document.getElementById("player");
+            let playerScoreInput = document.getElementById("score");
+            let updateButton = document.getElementById("updateButton");
+
+            let scores = {};
+
+            function fetchLeaderboard() {
+                axios.get("http://127.0.0.1:8000/get_scores.php")
+                    .then(response => {
+                        if (response.data) {
+                            scores = response.data;
+                            updateLeaderboard();
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error fetching leaderboard:", error);
+                    });
+            }
+
+            updateButton.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                let playerName = playerNameInput.value.trim();
+                let playerScore = parseInt(playerScoreInput.value);
+
+                if (playerName === "" || isNaN(playerScore)) {
+                    alert("Enter a valid player name and score!");
+                    return;
+                }
+
+                scores[playerName] = playerScore;
+
+                axios.post("http://127.0.0.1:8000/update_score.php", { player: { name: playerName, score: playerScore } })
+                    .then(response => {
+                        console.log("Score updated:", response.data);
+                    })
+                    .catch(error => {
+                        console.error("Error updating scores:", error);
+                    });
+
+                updateLeaderboard();
+                playerScoreInput.value = "";
+            });
+
+            var piesocket = new PieSocket.default({
+                clusterId: "free.blr2",
+                apiKey: "B9UKgvptNTWrZxfCUTquFp7nKVsYqu2LtmBao5Jg",
+                notifySelf: true,
+                presence: true
+            });
+
+            piesocket.subscribe("leaderboard-channel").then(ch => {
+                channel = ch;
+                channel.listen("scoreUpdate", function (data) {
+                    console.log("Received event from PieSocket:", data);
+                    if (data && data.name && data.score !== undefined) {
+                        scores[data.name] = data.score;
+                        updateLeaderboard();
+                    }
+                });
+            });
+
+            function updateLeaderboard() {
+                let sortedPlayers = Object.keys(scores).map(name => ({ name, score: scores[name] }))
+                    .sort((a, b) => b.score - a.score);
+
+                leaderboardTable.innerHTML = "";
+                sortedPlayers.forEach((player, index) => {
+                    let row = document.createElement("tr");
+                    row.innerHTML = `<td>${index + 1}</td><td>${player.name}</td><td>${player.score}</td>`;
+                    leaderboardTable.appendChild(row);
+                });
+
+                console.log("Leaderboard updated and sorted!");
+            }
+
+            fetchLeaderboard(); // Fetch initial data from the backend
+        });
+        window.onbeforeunload = function (event) {
+            return confirm("Confirm refresh");
+        };
+    </script>
+</body>
+
+</html>
