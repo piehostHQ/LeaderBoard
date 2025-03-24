@@ -115,6 +115,9 @@
     </div>
 
     <script>
+
+
+
         document.addEventListener("DOMContentLoaded", function () {
             let leaderboardTable = document.getElementById("leaderboard");
             let playerNameInput = document.getElementById("player");
@@ -123,21 +126,11 @@
 
             let scores = {};
 
-            function fetchLeaderboard() {
-                axios.get("http://127.0.0.1:8000/get_scores.php")
-                    .then(response => {
-                        if (response.data) {
-                            scores = response.data;
-                            updateLeaderboard();
-                        }
-                    })
-                    .catch(error => {
-                        console.error("Error fetching leaderboard:", error);
-                    });
-            }
+
 
             updateButton.addEventListener("click", function (e) {
                 e.preventDefault();
+                console.log("Button clicked");
 
                 let playerName = playerNameInput.value.trim();
                 let playerScore = parseInt(playerScoreInput.value);
@@ -147,19 +140,25 @@
                     return;
                 }
 
+                // Update the local scores object.
                 scores[playerName] = playerScore;
 
-                axios.post("http://127.0.0.1:8000/update_score.php", { player: { name: playerName, score: playerScore } })
+                // Make an Axios POST request to update the backend.
+                axios.post("http://127.0.0.1:8000/update_score.php", {
+                    player: { name: playerName, score: playerScore }
+                })
                     .then(response => {
-                        console.log("Score updated:", response.data);
+                        console.log("Score updated successfully:", response.data);
+                        updateLeaderboard(); // Refresh leaderboard after updating scores
                     })
                     .catch(error => {
-                        console.error("Error updating scores:", error);
+                        console.error("Error updating score:", error);
                     });
 
-                updateLeaderboard();
                 playerScoreInput.value = "";
             });
+
+
 
             var piesocket = new PieSocket.default({
                 clusterId: "free.blr2",
@@ -180,24 +179,35 @@
             });
 
             function updateLeaderboard() {
-                let sortedPlayers = Object.keys(scores).map(name => ({ name, score: scores[name] }))
-                    .sort((a, b) => b.score - a.score);
+                // Fetch the leaderboard data from get_score.php
+                axios.get("http://127.0.0.1:8000/get_score.php")
+                    .then(response => {
+                        if (response.data.status === "success") {
+                            const scores = response.data.data;
 
-                leaderboardTable.innerHTML = "";
-                sortedPlayers.forEach((player, index) => {
-                    let row = document.createElement("tr");
-                    row.innerHTML = `<td>${index + 1}</td><td>${player.name}</td><td>${player.score}</td>`;
-                    leaderboardTable.appendChild(row);
-                });
+                            // Update the table with retrieved data
+                            leaderboardTable.innerHTML = "";
+                            scores.forEach((player, index) => {
+                                let row = document.createElement("tr");
+                                row.innerHTML = `<td>${index + 1}</td><td>${player.player_name}</td><td>${player.score}</td>`;
+                                leaderboardTable.appendChild(row);
+                            });
 
-                console.log("Leaderboard updated and sorted!");
+                            console.log("Leaderboard updated with data from the database!");
+                        } else {
+                            console.error("Error fetching leaderboard data:", response.data);
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error fetching leaderboard data:", error);
+                    });
             }
 
-            fetchLeaderboard(); // Fetch initial data from the backend
+
+            updateLeaderboard();
         });
-        window.onbeforeunload = function (event) {
-            return confirm("Confirm refresh");
-        };
+
+
     </script>
 </body>
 
