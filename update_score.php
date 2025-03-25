@@ -36,4 +36,41 @@ $stmt->execute();
 $stmt->close();
 $conn->close();
 
-echo json_encode(["status" => "success"]);
+$apiKey = "API_KEY";
+$apiSecret = "API_SECRET";
+$roomId = "leaderboard-channel";
+
+$postData = [
+    "key" => $apiKey,
+    "secret" => $apiSecret,
+    "roomId" => $roomId,
+    "message" => [
+        "event" => "scoreUpdate",
+        "data" => [
+            "name" => $playerName,
+            "score" => $playerScore
+        ]
+    ]
+];
+
+$ch = curl_init();
+
+curl_setopt_array($ch, [
+    CURLOPT_URL => "https://free.blr2.piesocket.com/api/publish",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_CUSTOMREQUEST => "POST",
+    CURLOPT_POSTFIELDS => json_encode($postData),
+    CURLOPT_HTTPHEADER => [
+        "Content-Type: application/json"
+    ],
+]);
+
+$response = curl_exec($ch);
+$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
+
+echo json_encode([
+    "status" => "success",
+    "http_code" => $httpCode,
+    "piesocket_response" => $response
+]);
